@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighScore — Помощь с домашним заданием на высший балл</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <div class="logo">⚡ HighScore</div>
+            <ul>
+                <li><a href="#subjects">Предметы</a></li>
+                <li><a href="#steps">Как заказать</a></li>
+                <li><a href="#order">Оставить заявку</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="hero">
+        <h1>Забыли про домашку? <br><span class="highlight">HighScore</span> выручит!</h1>
+        <p>Быстро, качественно и анонимно помогаем школьникам и студентам щелкать задания как орешки.</p>
+        <a href="#order" class="cta-btn">Получить решение</a>
+    </section>
+
+    <!-- Раздел: Предметы -->
+    <section id="subjects" class="container">
+        <h2>С чем мы помогаем?</h2>
+        <div class="grid">
+            <div class="card card-math">
+                <div class="icon">📐</div>
+                <h3>Математика</h3>
+                <p>Алгебра, геометрия, высшая математика. Разберем любую теорему и уравнение.</p>
+            </div>
+            <div class="card card-phys">
+                <div class="icon">⚛️</div>
+                <h3>Физика</h3>
+                <p>Задачи на механику, термодинамику, электричество. Построим понятные графики.</p>
+            </div>
+            <div class="card card-rus">
+                <div class="icon">✍️</div>
+                <h3>Русский язык</h3>
+                <p>Сочинения, изложения, разбор предложений и сложные правила орфографии.</p>
+            </div>
+            <div class="card card-info">
+                <div class="icon">💻</div>
+                <h3>Информатика</h3>
+                <p>Помощь с кодом (Python, C++), алгоритмами, базами данных и тестами.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел: Как это работает -->
+    <section id="steps" class="container steps-bg">
+        <h2>3 простых шага к высшему баллу</h2>
+        <div class="grid-3">
+            <div class="step">
+                <span class="step-num">1</span>
+                <h3>Скидываешь задание</h3>
+                <p>Заполняешь форму внизу сайта и прикрепляешь фото или текст задания.</p>
+            </div>
+            <div class="step">
+                <span class="step-num">2</span>
+                <h3>Узнаешь стоимость</h3>
+                <p>Мы моментально оцениваем сложность и пишем тебе в мессенджер.</p>
+            </div>
+            <div class="step">
+                <span class="step-num">3</span>
+                <h3>Забираешь HighScore</h3>
+                <p>Высылаем подробное пошаговое решение вовремя. Твоя пятерка готова!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел: Форма заказа -->
+    <section id="order" class="container">
+        <div class="order-box">
+            <h2>Оставить заявку</h2>
+            <p>Заполни форму, и мы свяжемся с тобой в течение 5 минут!</p>
+            <form id="order-form">
+                <input type="text" placeholder="Твое имя" required>
+                <input type="tel" placeholder="Твой Telegram или WhatsApp" required>
+                <select required>
+                    <option value="" disabled selected>Выбери предмет</option>
+                    <option value="math">Математика</option>
+                    <option value="phys">Физика</option>
+                    <option value="rus">Русский язык</option>
+                    <option value="info">Информатика</option>
+                </select>
+                <textarea placeholder="Опиши задание (например: решить контрольную №3 к завтраму)" rows="4" required></textarea>
+                <button type="submit" class="cta-btn form-btn">Узнать цену</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2026 HighScore. Твой личный чит-код в учебе. Все права защищены.</p>
+    </footer>
+    <!-- Всплывающее окно (Модальное окно) -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2>Заявка принята!</h2>
+            <p>Мы уже подбираем автора для твоего задания. Напишем тебе в мессенджер в течение 5 минут!</p>
+            <button id="close-modal-btn" class="cta-btn">Отлично!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

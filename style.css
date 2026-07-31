@@ -1,0 +1,303 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f3f8;
+    color: #2d3436;
+}
+
+/* Контейнеры секций */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #2d3436;
+}
+
+/* Шапка */
+header {
+    background: #6c5ce7;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffeaa7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeaa7;
+}
+
+/* Главный экран */
+#hero {
+    background: linear-gradient(135deg, #6c5ce7 0%, #fd79a8 100%);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+#hero h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+#hero .highlight {
+    color: #ffeaa7;
+    text-shadow: 0 0 10px rgba(255, 234, 167, 0.5);
+}
+
+#hero p {
+    font-size: 22px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    opacity: 0.9;
+}
+
+/* Кнопки */
+.cta-btn {
+    display: inline-block;
+    background-color: #00cec9;
+    color: white;
+    text-decoration: none;
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 206, 201, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 206, 201, 0.6);
+    background-color: #00b894;
+}
+
+/* Сетка карточек предметов */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+/* Разноцветные границы для яркости */
+.card-math { border-top: 6px solid #ff7675; }
+.card-phys { border-top: 6px solid #74b9ff; }
+.card-rus { border-top: 6px solid #ffeaa7; }
+.card-info { border-top: 6px solid #a29bfe; }
+
+/* Шаги */
+.steps-bg {
+    background: #eccc68;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.step-num {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background: #6c5ce7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.step h3 { margin-bottom: 10px; margin-top: 10px;}
+
+/* Форма заказа */
+.order-box {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.order-box p { margin-bottom: 30px; color: #636e72; }
+
+#order-form input, #order-form select, #order-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #dfe6e9;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#order-form input:focus, #order-form select:focus, #order-form textarea:focus {
+    border-color: #6c5ce7;
+}
+
+.form-btn {
+    width: 100%;
+}
+
+/* Футер */
+footer {
+    background: #2d3436;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 768px) {
+    #hero h1 { font-size: 36px; }
+    nav { flex-direction: column; gap: 15px; }
+    nav ul li { margin: 0 10px; }
+}
+/* Стили для всплывающего окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Класс, который мы будем включать через JS для показа окна */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #6c5ce7;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #636e72;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
