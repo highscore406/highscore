@@ -32,7 +32,7 @@ body {
 /* Шапка */
 header {
     background: #6c5ce7;
-    padding: 20px;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -48,7 +48,7 @@ nav {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 800;
     color: #ffeaa7;
     text-transform: uppercase;
@@ -58,6 +58,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 nav ul li {
@@ -68,7 +69,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     transition: color 0.3s;
 }
 
@@ -226,6 +227,42 @@ nav ul li a:hover {
     border-color: #6c5ce7;
 }
 
+/* Стили для поля загрузки файлов */
+.file-upload-wrapper {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #f1f2f6;
+    border: 2px dashed #6c5ce7;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #6c5ce7;
+    transition: background 0.3s;
+}
+
+.file-label:hover {
+    background: #e8e8f9;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-list {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #2b2b2b;
+    font-weight: 500;
+}
+
 .form-btn {
     width: 100%;
 }
@@ -241,10 +278,21 @@ footer {
 
 /* Адаптивность для мобилок */
 @media (max-width: 768px) {
-    #hero h1 { font-size: 36px; }
-    nav { flex-direction: column; gap: 15px; }
-    nav ul li { margin: 0 10px; }
+    #hero h1 { font-size: 34px; }
+    #hero p { font-size: 18px; }
+    
+    header { padding: 12px 15px; }
+    nav { flex-direction: row; justify-content: space-between; }
+    .logo { font-size: 20px; }
+    
+    nav ul li { margin-left: 12px; }
+    nav ul li a { font-size: 13px; }
+    
+    .container { padding: 50px 15px; }
+    .container h2 { font-size: 28px; }
+    .order-box { padding: 25px 15px; }
 }
+
 /* Стили для всплывающего окна */
 .modal-overlay {
     position: fixed;
@@ -252,7 +300,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +310,6 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-/* Класс, который мы будем включать через JS для показа окна */
 .modal-overlay.active {
     opacity: 1;
     pointer-events: auto;
