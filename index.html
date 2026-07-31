@@ -81,9 +81,9 @@
         <div class="order-box">
             <h2>Оставить заявку</h2>
             <p>Заполни форму, и мы свяжемся с тобой в течение 5 минут!</p>
-            <form id="order-form">
+                        <form id="order-form">
                 <input type="text" placeholder="Твое имя" required>
-                <input type="tel" placeholder="Твой Telegram или WhatsApp" required>
+                <input type="text" placeholder="Твой Telegram или WhatsApp" required>
                 <select required>
                     <option value="" disabled selected>Выбери предмет</option>
                     <option value="math">Математика</option>
@@ -91,26 +91,18 @@
                     <option value="rus">Русский язык</option>
                     <option value="info">Информатика</option>
                 </select>
-                <textarea placeholder="Опиши задание (например: решить контрольную №3 к завтраму)" rows="4" required></textarea>
+                
+                <!-- Само поле ввода описания -->
+                <textarea placeholder="Опиши задание (например: решить контрольную №3)" rows="4" required></textarea>
+                
+                <!-- Новый блок для прикрепления фотографий -->
+                <div class="file-upload-wrapper">
+                    <label class="file-label">
+                        <span>📎 Прикрепить фото или файлы</span>
+                        <input type="file" id="file-input" class="file-input" accept="image/*" multiple>
+                    </label>
+                    <div id="file-list" class="file-list"></div>
+                </div>
+
                 <button type="submit" class="cta-btn form-btn">Узнать цену</button>
             </form>
-        </div>
-    </section>
-
-    <!-- Подвал сайта -->
-    <footer>
-        <p>&copy; 2026 HighScore. Твой личный чит-код в учебе. Все права защищены.</p>
-    </footer>
-    <!-- Всплывающее окно (Модальное окно) -->
-    <div id="success-modal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-icon">🎉</div>
-            <h2>Заявка принята!</h2>
-            <p>Мы уже подбираем автора для твоего задания. Напишем тебе в мессенджер в течение 5 минут!</p>
-            <button id="close-modal-btn" class="cta-btn">Отлично!</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
